@@ -4,7 +4,7 @@
 
  Author  : 
 
- date    : 2025/10/13
+ date    : 2025/10/14
  
  update  :
 
@@ -12,6 +12,7 @@
 
 remoto MCP server ,  example
 
+* turso database use
 
 ***
 * .env
