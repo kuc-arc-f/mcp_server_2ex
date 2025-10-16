@@ -16,7 +16,10 @@ remoto MCP server ,  example
 
 ***
 * .env
+* API_KEY: header Authorization
+
 ```
+API_KEY=
 TURSO_DATABASE_URL=""
 TURSO_AUTH_TOKEN=""
 ```

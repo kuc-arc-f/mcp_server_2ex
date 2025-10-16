@@ -7,6 +7,26 @@ import 'dotenv/config'
 const app = express();
 app.use(bodyParser.json());
 //console.log(process.env)
+app.use('/*', function(req, res, next) {
+  const apikey = process.env.API_KEY;
+  const authHeader = req.headers["authorization"]
+  if (apikey !== authHeader) {
+    console.log("authHeader=", authHeader)
+    console.log("NG, auth");
+    const response = {
+      jsonrpc: '2.0',
+      error: {
+        code: -32603,
+        message: 'error , header Authorization',
+        data: ""
+      },
+      id: 0,
+    };
+    return res.json(response);
+    //return res.sendStatus(400);
+  }
+  next();
+});
 
 // ツール定義
 const tools = [
