@@ -66,3 +66,5 @@ npm run dev
 
 ***
 ### blog 
+
+https://zenn.dev/knaka0209/scraps/4be37f5db128f0
