@@ -60,4 +60,9 @@ npm run dev
 ```
 
 ***
+* images
+
+![img1](/image/mcp_cli_4.png)
+
+***
 ### blog 
