@@ -17,6 +17,12 @@ MCP host + Rust MCP Server
 
 https://github.com/kuc-arc-f/rust_3ex/tree/main/mcp_4
 
+
+***
+* images
+
+![img1](/image/mcp_cli_4.png)
+
 ***
 * .env
 
@@ -59,11 +65,6 @@ npm run dev
 }
 
 ```
-
-***
-* images
-
-![img1](/image/mcp_cli_4.png)
 
 ***
 ### blog 
