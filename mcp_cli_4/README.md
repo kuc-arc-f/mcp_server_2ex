@@ -13,8 +13,9 @@
 MCP host + Rust MCP Server
 
 ***
-### blog 
+### MCP Server
 
+https://github.com/kuc-arc-f/rust_3ex/tree/main/mcp_4
 
 ***
 * .env
