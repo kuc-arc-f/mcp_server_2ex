@@ -36,7 +36,14 @@ MCP_SERVER_PATH="/path/mcp_6/target/release/rust_mcp_server_6.exe"
 npm run build
 npm run dev
 ```
+***
+* images , List
 
+![img1](/image/mcp_cli_6-1.png)
+
+* excel , download
+
+![img1](/image/mcp_cli_6-2.png)
 
 ***
 ### blog 
