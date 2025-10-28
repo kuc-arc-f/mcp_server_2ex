@@ -20,6 +20,11 @@ MCP host + GoLang MCP Server
 https://github.com/kuc-arc-f/golang_2ex/tree/main/mcp_7
 
 ***
+*images
+
+![img1](/image/mcp_cli_7_1.png)
+
+***
 * .env
 
 ```
