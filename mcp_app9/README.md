@@ -40,4 +40,8 @@ npm run dev
 ![img1](/image/mcp_app9.png)
 
 ***
-### blog 
+### related 
+
+https://zenn.dev/knaka0209/scraps/4be37f5db128f0
+
+***
