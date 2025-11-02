@@ -4,9 +4,8 @@ import RpcClient from '../lib/RpcClient'
 import path from 'node:path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-let __dirname = path.dirname(__filename);
-const CMD_PATH = __dirname + "/rust_mcp_server_9"
+const __dirname = process.cwd();
+const CMD_PATH = __dirname + "/dist/rust_mcp_server_9"
 import 'dotenv/config'
 
 const router = express.Router();
@@ -23,7 +22,7 @@ router.post('/create', async function(req: any, res: any) {
       { 
         name: "data_create", 
         arguments:{
-          content: "todo",
+          content: body.content,
           data: body.data
         }          
       },
@@ -49,7 +48,7 @@ router.post('/list', async function(req: any, res: any) {
       { 
         name: "data_list", 
         arguments:{
-          content: "todo",
+          content: body.content,
         }          
       },
     );
@@ -58,16 +57,14 @@ router.post('/list', async function(req: any, res: any) {
     const out = [];
     if(resp.content[0]){
       const json = JSON.parse(resp.content[0].text)
-      console.log(json)
       let rowData = null;
       json.forEach((item=>{
-        console.log(item.id)
         rowData = JSON.parse(item.data)
-        console.log(rowData)
+        //console.log(rowData)
         item.data = rowData;
         out.push(item)
       }));
-      console.log(out)
+      //console.log(out)
     }
 
    retObj.ret = 200;
@@ -90,7 +87,7 @@ router.post('/delete', async function(req: any, res: any) {
       { 
         name: "data_delete", 
         arguments:{
-          content: "todo",
+          content: body.content,
           id: body.id
         }           
       },
@@ -118,7 +115,7 @@ router.post('/update', async function(req: any, res: any) {
         name: "data_update", 
         arguments:{
           id: body.id,
-          content: "todo",
+          content: body.content,
           data: body.data
         }          
       },

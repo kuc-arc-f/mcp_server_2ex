@@ -16,9 +16,9 @@ export default function Page() {
     <body>
       <div id="app"></div>
       {(process.env.NODE_ENV === "production") ? (
-          <script type="module" src="/public/static/entry-client.js"></script>
+          <script type="module" src="/public/static/client.js"></script>
       ): (
-          <script type="module" src="/static/entry-client.js"></script>
+          <script type="module" src="/static/client.js"></script>
       )}
     </body>
 
