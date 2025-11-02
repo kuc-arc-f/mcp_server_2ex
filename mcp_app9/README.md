@@ -46,9 +46,8 @@ npm run dev
 
 
 ***
-### related 
+### blog
 
-https://zenn.dev/knaka0209/scraps/4be37f5db128f0
-
+https://zenn.dev/knaka0209/scraps/a988ad08b7c3c3
 
 ***
