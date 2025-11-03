@@ -1,5 +1,6 @@
 use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::{future_to_promise, spawn_local};
+use pulldown_cmark::{Parser, html};
 use serde::{Serialize, Deserialize};
 //use js_sys::Promise;
 
@@ -57,8 +58,57 @@ pub fn render_erchart_show(value: &str) -> String {
 }
 
 #[wasm_bindgen]
+pub fn render_md_show(value: &str) -> String {
+    let result = format!(r#"
+        <html>
+            <head>
+                <title>welcome</title>
+                <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+            </head>
+            <body>
+                <div class="max-w-6xl mx-auto px-4">
+                    <a href="/mark_down">
+                        <button 
+                        class="border border-blue-500 text-blue-500 bg-white font-bold py-1 px-2 rounded mt-2 mx-2">
+                            Back
+                        </button>
+                    </a>
+                    <hr class="my-2"/>
+                    {}
+                </div>
+            </body>
+        </html>
+        "#
+    , value);
+    return result;
+}
+
+#[wasm_bindgen]
 pub fn greet(name: &str) -> String {
     format!("Hello, {}!", name)
 }
 
+#[wasm_bindgen]
+pub fn foo() -> String {
+    let markdown_input = "# タイトル\n\nこれは **Markdown** テキストです。";
 
+    // Markdown → HTML 変換
+    let parser = Parser::new(markdown_input);
+
+    let mut html_output = String::new();
+    html::push_html(&mut html_output, parser);
+
+    println!("{}", html_output);
+    return html_output
+}
+
+#[wasm_bindgen]
+pub fn convert_md(value: &str) -> String {
+    let parser = Parser::new(value);
+
+    let mut html_output = String::new();
+    html::push_html(&mut html_output, parser);
+
+    println!("{}", html_output);
+    return html_output
+}

@@ -8,6 +8,7 @@ function Page() {
     <a href="/about" className="ms-2 text-gray-400"> [ about ]</a>
     <a href="/todo" className="ms-2"> [ Todo ]</a>
     <a href="/er_chart" className="ms-2"> [ ErChart ]</a>
+    <a href="/mark_down" className="ms-2"> [ MarkDown ]</a>
     <hr className="my-2" />
   </div>
   );

@@ -4,6 +4,7 @@ import Home from './client/Home';
 import About from './client/about';
 import Todo from './client/Todo';
 import ErChart from './client/ErChart';
+import MarkDown from './client/MarkDown';
 import Login from './client/Login';
 
 export default function App(){
@@ -14,6 +15,7 @@ export default function App(){
         <Route path="/about" element={<About />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/er_chart" element={<ErChart />} />
+        <Route path="/mark_down" element={<MarkDown />} />
         <Route path="/login" element={<Login />} />
         
       </Routes>
