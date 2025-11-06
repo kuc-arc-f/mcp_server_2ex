@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "dev": "nodemon",
+    "build": "npm run build:server && npm run build:client && npm run build:css",
+    "build:server": "npx esbuild --bundle --platform=node src-ts/index.ts  --outfile=./dist/index.js",
+    "build:client": "npx esbuild --bundle src-ts/client.tsx --minify --outfile=./public/static/client.js",
+    "build:css": "npx @tailwindcss/cli -i ./src-ts/main.css -o ./public/static/main.css",
+    "build:prod": "cross-env NODE_ENV=production npm run build",
+    "start": "cross-env NODE_ENV=production node dist/index.js"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "axios": "^1.6.5",
+    "cookie-parser": "^1.4.6",
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "lucide-react": "^0.513.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.21.2",
+    "tailwindcss": "^4.1.8",
+    "zod": "^3.25.56"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.14.6",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.4",
+    "esbuild": "^0.25.11",
+    "globals": "^16.1.0",
+    "nodemon": "^3.1.0",
+    "typescript": "~5.8.3"
+  }
+}
