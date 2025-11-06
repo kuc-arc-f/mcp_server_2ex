@@ -13,8 +13,9 @@
 MCP host + Rust MCP Server, postgres
 
 ***
-### blog 
+### MCP Server 
 
+https://github.com/kuc-arc-f/rust_3ex/tree/main/mcp_11
 
 ***
 * .env
