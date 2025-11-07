@@ -38,7 +38,42 @@ export default function Chat() {
       console.error(e);
     }
   }
+  const testDelete = async function(){
+    try{  
+      const res = await fetch("/api/test/delete", {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},      
+        body: JSON.stringify({
+          content: "test",
+          id: 14
+        }),
+      });
+      const json = await res.json();
+      console.log(json);
+    } catch(e){
+      console.error(e);
+    }
+  }
 
+  const testUpdate = async function(){
+    try{  
+      const res = await fetch("/api/test/update", {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},      
+        body: JSON.stringify({
+          content: "content-updp",
+          title: "test-updp",
+          id: 15
+        }),
+      });
+      const json = await res.json();
+      console.log(json);
+    } catch(e){
+      console.error(e);
+    }
+  }  
+  /*
+  */
   return (
   <div className="mb-[200px]">
     <Head />
@@ -49,6 +84,10 @@ export default function Chat() {
         <button onClick={()=>{testStart()}}>[ add ]</button>
         <hr />
         <button onClick={()=>{testList()}}>[ List ]</button>
+        <hr />
+        <button onClick={()=>{testDelete()}}>[ Delete ]</button>
+        <hr />
+        <button onClick={()=>{testUpdate()}}>[ Update ]</button>
         <hr />
 
       </div>

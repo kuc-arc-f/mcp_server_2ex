@@ -79,4 +79,57 @@ router.post('/list', async function(req: any, res: any) {
   }
 });
 
+router.post('/delete', async function(req: any, res: any) {
+  const retObj = {ret: 500, data: null};
+  try {
+    const body = req.body
+    console.log(body);
+    const client = new RpcClient(CMD_PATH);
+    const resp = await client.call(
+      "tools/call", 
+      { 
+        name: "test_delete", 
+        arguments:{
+          content: body.content,
+          id: body.id
+        }           
+      },
+    );
+    client.close();    
+  //console.log("add:", resp);
+   retObj.ret = 200;
+   return res.json(retObj);
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
+});
+
+router.post('/update', async function(req: any, res: any) {
+  const retObj = {ret: 500, data: null};
+  try {
+    const body = req.body
+    console.log(body);
+    const client = new RpcClient(CMD_PATH);
+    const resp = await client.call(
+      "tools/call", 
+      { 
+        name: "test_update", 
+        arguments:{
+          id: body.id,
+          content: body.content,
+          title: body.title
+        }          
+      },
+    );
+    client.close();    
+  //console.log("add:", resp);
+   retObj.ret = 200;
+   return res.json(retObj);
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
+});
+
 export default router;
