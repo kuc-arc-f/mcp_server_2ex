@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 import RpcClient from '../../lib/RpcClient'
 const __dirname = process.cwd();
-const CMD_PATH = __dirname + "/dist/rust_mcp_server_14.exe"
+const CMD_PATH = __dirname + "/dist/rust_mcp_server_14"
 console.log("CMD_PATH=", CMD_PATH)
 
 export async function POST(req: Request) {

@@ -6,7 +6,7 @@
 
  date    : 2025/11/15 
   
- update  : 
+ update  : 2025/11/16
 
 ***
 
@@ -24,8 +24,9 @@ npm run build
 npm run dev
 ```
 
-
 ***
 ### blog 
+
+https://zenn.dev/knaka0209/scraps/c4f9c6a6ab72b3
 
 ***
