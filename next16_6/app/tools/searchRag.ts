@@ -79,9 +79,9 @@ async function CheckSimalirity(query, sess) {
       for (const row of result.rows) {
           const e = new Float32Array(row.embeddings.buffer)
           const sim = cosineSimilarity(embedding, e)
-          console.log(`doc: ${row.name}, similarity: ${sim}`)
           //console.log(`doc: ${row.name}, similarity: ${sim}, user query: ${query}`)
           if (sim > 0.6) {
+              console.log(`doc: ${row.name}, similarity: ${sim}`)
               matches += row.content + "\n"
           }
       }
