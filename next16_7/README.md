@@ -12,7 +12,7 @@
 
 next.js remote MCP Server, RAG Search
 
-* pgvector dokcer
+* pgvector docker
 * embedding: qwen3-embedding:0.6b Ollama
 * GEMINI-CLI use
 
@@ -88,7 +88,10 @@ const start = async function() {
 start();
 
 ```
+
 ***
 ### blog 
+
+https://zenn.dev/link/comments/51bae55a2e170c
 
 ***
