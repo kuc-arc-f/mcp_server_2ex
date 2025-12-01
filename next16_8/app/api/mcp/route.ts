@@ -86,7 +86,6 @@ export async function POST(req: Request) {
   const params = reqJson.params;
   const id = reqJson.id;
   try{  
-    //const { jsonrpc, method, params, id } = request;
     console.log(reqJson);
     // JSON-RPC 2.0 バージョンチェック
     if (jsonrpc !== '2.0') {

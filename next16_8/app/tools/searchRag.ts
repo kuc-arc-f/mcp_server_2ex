@@ -1,9 +1,3 @@
-//import { google } from "@ai-sdk/google";
-//import { createGoogleGenerativeAI } from "@ai-sdk/google";
-//import { embed } from 'ai';
-//import { Client } from "pg";
-//import ollama from 'ollama'
-//import pgvector from 'pgvector/pg';
 import RpcClient from '../lib/RpcClient'
 const __dirname = process.cwd();
 const CMD_PATH = __dirname + "/dist/rust_mcp_server_21.exe"
@@ -19,7 +13,6 @@ const MODEL_EMBED_NAME="qwen3-embedding:0.6b";
 export async function Chat(userQuery, sess) {
   console.log("PG_CONNECT_STR=", process.env.PG_CONNECT_STR);
   try{
-  //const query = await CheckSimalirity(userQuery, sess);
     const client = new RpcClient(CMD_PATH);
     const resp = await client.call(
       "tools/call", 
@@ -36,7 +29,6 @@ export async function Chat(userQuery, sess) {
     //@ts-ignore
     if(resp.content[0].text){
       //const json = JSON.parse(resp.content[0].text)
-      //console.log(json);
       //@ts-ignore
       const query = resp.content[0].text;
       const newQuery = `
