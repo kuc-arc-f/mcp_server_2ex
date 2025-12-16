@@ -34,3 +34,6 @@ docker run -p 8000:8000 chromadb/chroma
 
 ***
 ### blog 
+
+https://zenn.dev/knaka0209/scraps/21050efdfb8e3d
+
