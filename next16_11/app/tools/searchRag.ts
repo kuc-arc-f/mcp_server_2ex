@@ -53,13 +53,16 @@ async function CheckSimalirity(query) {
       console.log(`\n${i + 1}. ${doc}`);
       console.log(`   距離: ${results.distances[0][i].toFixed(4)}`);
       ouStr += doc + "\n\n";
-      //console.log(`   メタデータ:`, results.metadatas[0][i]);
     });
-
-     return ouStr !== `` ? `
-     context: ${ouStr}\n
-     user query: ${query}
-    ` : query   
+    if(ouStr !== ""){
+      matches = `
+      context: ${ouStr}\n
+      user query: ${query}
+      `
+    }else{
+      matches = "user query: " + query;
+    }
+    return matches;
   }catch(e){
     console.log(e)
   }
@@ -74,7 +77,7 @@ async function CheckSimalirity(query) {
 export async function Chat(userQuery) {
   try{
     const query = await CheckSimalirity(userQuery);
-
+    //console.log("Chat.query: ", query)
     const newQuery = `
 ***
 日本語で、回答して欲しい。
