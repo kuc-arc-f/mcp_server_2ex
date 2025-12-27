@@ -42,5 +42,9 @@ npx tsx src/embed.ts
 ```
 npx tsx src/index.ts
 ```
+
 ***
 ### blog 
+
+https://zenn.dev/knaka0209/scraps/60cc69499dda32
+
