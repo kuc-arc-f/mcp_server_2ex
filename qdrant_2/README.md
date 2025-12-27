@@ -25,6 +25,9 @@ GOOGLE_API_KEY=your-key
 ```
 
 ***
+* data path: ./data
+
+***
 * init, Collection add
 ```
 npx tsx src/init.ts
