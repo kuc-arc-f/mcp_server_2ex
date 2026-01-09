@@ -26,4 +26,17 @@ GOOGLE_API_KEY=your-key
 ```
 
 ***
+* vector data add
+```
+npx tsx src/embed.ts
+```
+
+***
+* RAG Search
+
+```
+npx tsx src/index.ts
+```
+
+***
 ### blog 
