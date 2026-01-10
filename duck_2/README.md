@@ -40,3 +40,7 @@ npx tsx src/index.ts
 
 ***
 ### blog 
+
+https://zenn.dev/knaka0209/scraps/ba5a56e25af60e
+
+***
