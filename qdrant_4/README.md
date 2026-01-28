@@ -39,3 +39,6 @@ npx tsx src/index.ts
 ```
 ***
 ### blog 
+
+https://zenn.dev/knaka0209/scraps/59a84c814178b9
+
