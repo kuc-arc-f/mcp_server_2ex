@@ -31,3 +31,7 @@ npm run dev
 
 ***
 ### blog 
+
+https://zenn.dev/link/comments/1a5cef332d44a1
+
+***
