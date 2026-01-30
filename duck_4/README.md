@@ -10,7 +10,7 @@
 
 ***
 
-RAG search , DuckDb example
+RAG search , Express DuckDb
 
 * Copilot CLI SDK use 
 * embedding: qwen3-embedding:0.6b , ollama
